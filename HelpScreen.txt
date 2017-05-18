@@ -10,6 +10,6 @@ f <x> <y> 	- toggles the flag at the given coordinate
 c <x> <y>	- clicks at the given coordinate
 h - prints the help screen
 p - prints the discovered map ( happens after every click )
-sp - prints the whole map ( use for debugging )
-
+sp - prints the whole map ( use for debugging ) ( different from 'd' )
+d - enters debug mode
 
