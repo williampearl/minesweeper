@@ -1,5 +1,5 @@
-# minesweeper
-Created by William Pearl
-5/18/17
-AP Computer Science project
-
+# Minesweeper
+### By William Pearl
+### Created 5/18/17
+Made for my APCS end of the year project.
+I'm still updating it and adding graphics.
