@@ -137,11 +137,15 @@ public class Minesweeper {
 		incrementTileAmount(r+1, c+1);
 	}
 	
-	
-	public void setBomb(int r, int c)
+	public int getArea() {
+		return map.length * map[0].length;
+	}
+	public void setBomb()
 	{
-		if((r < 0 || r >= map.length) || (c < 0 || c >= map[r].length) || map[r][c].isBomb())
-			return;
+		int r = ((int)(Math.random()*getArea()))%map.length;
+		int c = ((int)(Math.random()*getArea()))%map[0].length;
+		if(map[r][c].isBomb())
+			setBomb();
 		map[r][c].setBomb();
 		incrementArea(r,c);
 		
@@ -149,14 +153,8 @@ public class Minesweeper {
 	}
 	public void setBombs()
 	{
-		for(int r = 0; r<map.length; r++){
-			for(int c=0; c<map.length; c++){
-				if((int)(Math.random() * 10) == 0){
-					//System.out.println("bomb @ " + r +" " + c);
-					setBomb(r,c);
-				}
-			}
-		}
+		for(int i=0; i<25; i++)
+			setBomb();
 	}
 	
 	
