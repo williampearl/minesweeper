@@ -38,7 +38,7 @@ public class Minesweeper {
 	private boolean runGame;
 	private boolean debug;
 	private int tileSize;
-	
+	private long time;
 	
 	public Minesweeper(int sizeX, int sizeY)
 	{
@@ -53,9 +53,11 @@ public class Minesweeper {
     {
     	while(runGame)
     	{
-    		getInput();
+    		//getInput();
     		try {
-				Thread.sleep((long) 100);
+				Thread.sleep((long) 1000);
+				time++;
+				System.out.println(time);
 			} catch (InterruptedException e) {
 	
 				e.printStackTrace();

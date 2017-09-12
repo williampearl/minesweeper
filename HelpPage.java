@@ -10,15 +10,25 @@ import javax.swing.*;
 
 public class HelpPage extends JFrame{
 	
+	JPanel main;
+	JScrollPane scroll;
+	
 	public HelpPage() {
+		setSize(300,300);
+		main = new JPanel();
+		scroll = new JScrollPane();
+		scroll.createHorizontalScrollBar();
+		scroll.setPreferredSize(new Dimension(100, 100));
+		add(main);
+		main.add(scroll);
 		
+		scroll.add(new JTextArea(1000,1000));
+		scroll.createHorizontalScrollBar();
+		scroll.createVerticalScrollBar();
+		setVisible(true);
 	}
-	
-	public static void open() {
-		new HelpPage();
-	}
-	
+		
 	public static void main(String[] args){
-		open();
+		new HelpPage();
 	}
 }
